@@ -28,14 +28,15 @@ function App() {
           <input
             type="text"
             value={myMoney}
-            placeholder="원 단위로 3자리 이상 적어주세요"
+            placeholder="원 단위로 적어주세요"
             onChange={onChange}
           />
           <div>
-            {myMoney.length > 2 &&
-              `내 돈으로 살 수 있는 비트코인: ${
-                myMoney / 1358 / bitCoin.quotes.USD.price
-              }`}
+            {myMoney.length > 2 && 
+            
+            내 돈으로 살 수 있는 비트코인:{" "}
+            {myMoney / 1358 / bitCoin.quotes.USD.price}
+            }
           </div>
         </>
       )}

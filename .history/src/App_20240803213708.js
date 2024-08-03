@@ -24,18 +24,15 @@ function App() {
       {/* 입력값에 따라서 얼마만큼의 비트코인을 살 수 있는지 알려줌 */}
       {loading ? null : (
         <>
-          <h3>내가 가지고 있는 금액을 적어주세요!</h3>
           <input
             type="text"
             value={myMoney}
-            placeholder="원 단위로 3자리 이상 적어주세요"
+            placeholder="달러 기준으로 돈 작성"
             onChange={onChange}
           />
           <div>
-            {myMoney.length > 2 &&
-              `내 돈으로 살 수 있는 비트코인: ${
-                myMoney / 1358 / bitCoin.quotes.USD.price
-              }`}
+            내 돈으로 살 수 있는 비트코인:{" "}
+            {((myMoney * 1358) / bitCoin.quotes.USD.price) * 1358}
           </div>
         </>
       )}

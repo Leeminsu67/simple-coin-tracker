@@ -28,7 +28,7 @@ function App() {
           <input
             type="text"
             value={myMoney}
-            placeholder="원 단위로 3자리 이상 적어주세요"
+            placeholder="원 단위로 적어주세요"
             onChange={onChange}
           />
           <div>
